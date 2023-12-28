@@ -24,62 +24,95 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
-dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo: 'https://github.com/adalimayeu/dotfiles.git'
+dotfiles_repo_version: master
+dotfiles_repo_local_destination: '~/.dotfiles_source'
 dotfiles_files:
+  - .oh-my-zsh/themes/oxide.zsh-theme
+  - .aliases
+  - .dircolors
+  - .exports
+  - .functions
+  - .fzf.zsh
+  - .ripgreprc
   - .zshrc
+  # - .osx
+  # - .gitconfig
   - .gitignore
-  - .inputrc
-  - .osx
-  - .vimrc
 
+homebrew_group: '80'
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
+  - awscli
+  - bash
+  - docker-compose
+  - dos2unix
+  - flux
+  - fluxctl
+  - fzf
   - git
-  - gh
   - go
-  - gpg
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
-  - zsh-history-substring-search
+  - grep
+  - groovy
+  - helm
+  - jq
+  - k9s
+  - kind
+  - kubectx
+  - kubernetes-cli
+  - kubeseal
+  - kustomize
+  - lazygit
+  - minikube
+  - neovim
+  - openssl@3
+  - podman
+  - python-setuptools
+  - python@3.11
+  - qemu
+  - ripgrep
+  - saml2aws
+  - shellcheck
+  - sshpass
+  - terragrunt
+  - tfenv
+  - tmux
+  - vault
+  - watch
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
+  # - homebrew/core
+  # - homebrew/cask
+  - derailed/k9s
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
-  - docker
-  - dropbox
+  - 1password-cli
+  - alt-tab
+  - calibre
+  - drawio
   - firefox
+  - flameshot
   - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
+  - iterm2
+  - kap
+  - mac-mouse-fix
+  - mos
+  - obsidian
+  - rar
+  - raycast
+  - rectangle
+  - skype
   - slack
-  - sublime-text
-  - transmit
+  - spotify
+  - telegram
+  - time-out
+  - todoist
+  - vagrant
+  - viber
+  - virtualbox
+  - visual-studio-code
+  - vlc
+  - wireshark
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
